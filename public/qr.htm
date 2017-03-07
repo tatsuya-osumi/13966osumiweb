@@ -1,0 +1,32 @@
+<html>
+ <head>
+  <!-- jquery本体 -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <!-- /jquery本体 -->
+  <!-- jquery.qrcode.js -->
+   <script type="text/javascript" src="http://t-syskan-76/shogai-manual/osumi/js/jquery.qrcode.min.js"></script>
+  <!-- /jquery.qrcode.js -->
+  <!-- setting -->
+  <script type="text/javascript">
+   $(document).ready(function(){
+     $('#qcdemo1').qrcode("http://jump-up.info"); //demo1:そのままテキストを入れる、今回は当サイトのURL
+     
+     $('#qcdemo2').qrcode({                       //demo2:幅や高さを指定する場合
+         width:100,                               //QRコードの幅
+         height:100,                              //QRコードの高さ 
+         text:'http://jump-up.info'               //QRコードの内容
+     });
+   });
+  </script>
+  <!-- /setting -->
+ </head>
+ <body>
+  <!-- 次のデモの部分をそのまま入れている -->
+  <h5>デモ1－デフォルト表示</h5>
+  <div id="qcdemo1"></div>
+  <br />
+  <h5>デモ2</h5>
+  <p>サイズを100px四方に変更した。</p>
+  <div id="qcdemo2"></div>
+ </body>
+</html>
